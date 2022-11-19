@@ -19,7 +19,5 @@ public class Start {
 				System.out.println("Vince il secondo giocatore");
 			}
 		}
-		
 	}
-
 }
