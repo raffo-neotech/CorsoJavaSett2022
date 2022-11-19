@@ -47,7 +47,9 @@ public class Aeroporto {
 			passeggeroImbarcato.setStato(StatoPasseggero.CHECKOUT);
 		} else {
 			//ERRORE IL PASSEGGERO NON è IN CHEKIN
-		} 
+		}
+		
+		this.check(passeggeroImbarcato);
 		return passeggeroImbarcato;
 	}
 	
@@ -57,7 +59,9 @@ public class Aeroporto {
 			passeggeroChekingIn.setStato(StatoPasseggero.IMBARCATO);
 		} else {
 			//ERRORE IL PASSEGGERO NON è IN CHEKIN
-		} 
+		}
+		
+		this.check(passeggeroChekingIn);
 		return passeggeroChekingIn;
 	}
 	
@@ -69,6 +73,20 @@ public class Aeroporto {
 			//ERRORE L AEREO NON è A TERRA
 		} 
 		return aereoATerra;
+	}
+	
+	private void check(Passeggero passeggeroChecking) {
+		if(passeggeroChecking instanceof Excelsior) {
+			((Excelsior)passeggeroChecking).setHaChampagne(true);
+		}
+		
+		if(passeggeroChecking instanceof Business) {
+			((Business)passeggeroChecking).setHaGiornale(true);
+		}
+		
+		if(passeggeroChecking.getMF()=='F') {
+			passeggeroChecking.setHasFiore(true);
+		}
 	}
 	
 	//GETTERS AND SETTERS
