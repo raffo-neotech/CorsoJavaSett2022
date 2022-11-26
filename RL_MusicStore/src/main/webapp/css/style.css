@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+.hidden {
+	display: none;
+}
+.titoli {
+	background-color: springgreen;
+}
+
+.linea_A {
+	background-color: aquamarine;
+}
+
+.linea_B {
+	background-color: lightgrey;
+}
+.dettagli {
+	content:url(https://icons.veryicon.com/png/o/internet--web/flatten-icon/organization-5.png);
+	width: 16px;
+	height: 16px;
+}
+.carrello {
+	content:url(https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/order-placed-purchased-icon.svg);
+	width: 16px;
+	height: 16px;
+}
