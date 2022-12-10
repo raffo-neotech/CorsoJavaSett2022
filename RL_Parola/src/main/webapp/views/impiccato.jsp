@@ -52,37 +52,37 @@
 					<div class="container">
 						<div class="row" style="min-height: 65px">
 							<div class="col-md-4">
-								<img src="IMG/1.jpg" id="C_1" class="nascosto">
+								<img src="static/img/1.jpg" id="C_1" class="nascosto">
 							</div>
 							<div class="col-md-4">
-								<img src="IMG/2.jpg" id="C_2" class="nascosto">
+								<img src="static/img/2.jpg" id="C_2" class="nascosto">
 							</div>
 							<div class="col-md-4">
-								<img src="IMG/3.jpg" id="C_3" class="nascosto">
-							</div>
-						</div>
-						<div class="clearfix"></div>
-						<div class="row" style="min-height: 65px">
-							<div class="col-md-4">
-								<img src="IMG/4.jpg" id="C_4" class="nascosto">
-							</div>
-							<div class="col-md-4">
-								<img src="IMG/5.jpg" id="C_5" class="nascosto">
-							</div>
-							<div class="col-md-4">
-								<img src="IMG/6.jpg" id="C_6" class="nascosto">
+								<img src="static/img/3.jpg" id="C_3" class="nascosto">
 							</div>
 						</div>
 						<div class="clearfix"></div>
 						<div class="row" style="min-height: 65px">
 							<div class="col-md-4">
-								<img src="IMG/7.jpg" id="C_7" class="nascosto">
+								<img src="static/img/4.jpg" id="C_4" class="nascosto">
 							</div>
 							<div class="col-md-4">
-								<img src="IMG/8.jpg" id="C_8" class="nascosto">
+								<img src="static/img/5.jpg" id="C_5" class="nascosto">
 							</div>
 							<div class="col-md-4">
-								<img src="IMG/9.jpg" id="C_9" class="nascosto">
+								<img src="static/img/6.jpg" id="C_6" class="nascosto">
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="row" style="min-height: 65px">
+							<div class="col-md-4">
+								<img src="static/img/7.jpg" id="C_7" class="nascosto">
+							</div>
+							<div class="col-md-4">
+								<img src="static/img/8.jpg" id="C_8" class="nascosto">
+							</div>
+							<div class="col-md-4">
+								<img src="static/img/9.jpg" id="C_9" class="nascosto">
 							</div>
 						</div>
 						<div class="clearfix"></div>
@@ -97,7 +97,8 @@
 	<script>
 		var errori=0;
 		var parola="PAROLA";
-		
+
+		<!-- hai perso ! -->
 		function perso() {
 			$("#iconcina").css("color","red");
 			$("#iconcina").css("display","block");
@@ -106,7 +107,8 @@
 				alert("hai perso");
 			}, 200);
 		}
-		
+
+		<!-- hai vinto ! -->
 		function vinto() {
 			$("#iconcina").css("color","blue");
 			$("#iconcina").css("display","block");
@@ -115,7 +117,8 @@
 				alert("hai vinto");
 			}, 200);
 		}
-		
+
+		<!-- Funzione principale -->
 		function showElement(x) {
 			if(errori>8) {
 				return(false);
@@ -143,6 +146,7 @@
 			return(trovato);
 		}
 
+		<!-- Procedura che viene eseguita quando viene inserita una lettera che non fa parte della parola -->
 		function errore() {
 			errori++;
 			if(errori>=9) {
@@ -155,17 +159,16 @@
 			$("#C_"+errori).css("display","block");
 		}
 		
+		<!-- Una volta caricato l intero documento assegna la funzione di click al pulzante -->
 		$(document).ready(function() {
-			
-		// Will accure at every click
-		$("#codd").click(
-			function() {
-				if(showElement($("#lettera").val())==false) {
-					errore();
+			$("#codd").click(
+				function() {
+					if(showElement($("#lettera").val())==false) {
+						errore();
+					}
 				}
-			}
-		);
-	});
+			);
+		});
 						  
 	</script>
 </html>

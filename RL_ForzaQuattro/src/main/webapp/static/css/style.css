@@ -1,0 +1,40 @@
+.nascosto {
+	display: none;
+}
+.rigo {
+	display: flex;
+	min-width: 476px;
+	width: 476px;
+}
+.casella , .casellaV, .casellaR, .casellaG {
+	display: flex;
+	width: 68px;
+	height: 68px;
+	background-size:100% 100%;
+}
+.casellaV {
+	background-image: url("../img/V.jpg");
+}
+.casellaR {
+	background-image: url("../img/R.jpg");
+}
+.casellaG {
+	background-image: url("../img/G.jpg");
+}
+.bottoneR {
+	display: flex;
+	width: 68px;
+	height: 24px;
+	background-size:100% 100%;
+	background-image: url("../img/BottoneRosso.png");
+}
+.bottoneG {
+	display: flex;
+	width: 68px;
+	height: 24px;
+	background-size:100% 100%;
+	background-image: url("../img/BottoneGiallo.png");
+}
+.bottoneR:hover, .bottoneG:hover {
+	cursor: pointer;
+}
